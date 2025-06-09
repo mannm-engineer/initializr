@@ -1,0 +1,31 @@
+# Datasource Configuration (PostgreSQL)
+spring:
+  datasource:
+    url: jdbc:postgresql://34.126.164.211:30002/postgres
+    username: master
+    password: pwd
+    driver-class-name: org.postgresql.Driver
+
+  # JPA & Hibernate Configuration
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        globally_quoted_identifiers: true
+        generate_statistics: false
+
+  # Test Configuration
+  test:
+    database:
+      replace: none
+
+# Logging Configuration
+logging:
+  level:
+    org:
+      hibernate: DEBUG
+      springframework: DEBUG

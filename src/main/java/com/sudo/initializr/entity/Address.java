@@ -1,0 +1,17 @@
+package com.sudo.initializr.entity;
+
+import jakarta.persistence.Embeddable;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+
+@Embeddable
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class Address {
+
+  private String street;
+  private String city;
+  private String zipcode;
+}
